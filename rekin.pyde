@@ -30,19 +30,19 @@ def draw():
     shape(s, 25, 25)
     point(150, 300)
     if hex(get(mouseX, mouseY)) == ('FF00FFFF'):
+        fill(random(0,255),random(0,255),random(0,255)) # najpierw ustawiamy kolor,a potem w nim rysujemy
         text('A.N.', width/2-40, height/2-70)
-        fill(random(0,255),random(0,255),random(0,255))
-    if (keyPressed == 'true'):
-        text('A.N.', width/2-40, height/2-70)
-        fill(255,0,0)
-    elif (key == 'a'):
-        text('A.N.', width/2-40, height/2-70)
-        fill(0,255,0)
-    elif (key == 'n'):
-        text('A.N.', width/2-40, height/2-70)
-        fill(255,255,0)
+    elif (keyPressed == True): # nie chodziłoo napis o treści prawda, tylko typ logiczny prawda
+        if (key == 'a'):
+            fill(0,255,0)
+            text('A.  ', width/2-40, height/2-70) # skoro już rozdzielasz, to takie małe wizualne uzupełnienie ;)
+        elif (key == 'n'):
+            fill(255,255,0)
+            text('   N.', width/2-40, height/2-70)
+        else:
+            fill(255,0,0)
+            text('A.N.', width/2-40, height/2-70)
     else:
-        text('A.N.', width/2-40, height/2-70)  
         fill(255,0,255)
-
-        
+        text('A.N.', width/2-40, height/2-70)
+   # 2 pkt 
